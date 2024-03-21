@@ -1,0 +1,54 @@
+/* Color Theme Swatches in Hex */
+/*.principal { color: #050DA6; }
+.------- { color: #115D8C; }
+.Moda-3-hex { color: #1F80A6; }
+.blackground { color: #dde175; }
+.destaque { color: #BF6B04; }*/
+
+/*1. Aspectos gerais. Aplique os seguintes estilos a estrutura geral da página.
+1. Defina um tamanho fixo para a página inteira
+2. Defina uma fonte do tipo sans-serif para a página inteira
+3. Indente os parágrafos em 1em
+2. Títulos. Alinhe todos os títulos para o centro ou a direita.
+1. Defina o tamanho do h1 em 1.8rem
+2. Defina o tamanho do h2 em 1.4rem
+3. Defina o tamanho do h3 em 1.2rem
+3. Seções de resumo e principal. Localize os elementos que representam a seção
+de resumo e principal da página, e aplique nelas:
+1. Alinhamento a direita ou centralizado para a seção de resumo.
+2. Espaçamento entre as linhas de 1.5 para os parágrafos da seção principal.
+4. Abreviaturas. Customize todos as abreviaturas para que a fonte seja carregada
+em small-caps */
+
+.page-wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+html{
+    background: #dde175;
+    color: #050DA6;
+
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+}
+
+P{
+    text-indent: 1em;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {font-size: 1.8rem;}
+h2 {font-size: 1.4rem;}
+h3 {font-size: 1.2rem;}
+
+.summary {
+    text-align: right;
+}
+.main p {line-height: 1.5;}
+
+abbr {font-variant: small-caps;}
