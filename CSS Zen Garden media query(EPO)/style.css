@@ -1,0 +1,229 @@
+
+/*.principal { color: #050DA6; }
+.------- { color: #115D8C; }
+.Moda-3-hex { color: #1F80A6; }
+.blackground { color: #dde175; }
+.destaque { color: #BF6B04; }*/
+
+/*1. Aspectos gerais. Aplique os seguintes estilos a estrutura geral da página.
+1. Defina um tamanho fixo para a página inteira
+2. Defina uma fonte do tipo sans-serif para a página inteira
+3. Indente os parágrafos em 1em
+2. Títulos. Alinhe todos os títulos para o centro ou a direita.
+1. Defina o tamanho do h1 em 1.8rem
+2. Defina o tamanho do h2 em 1.4rem
+3. Defina o tamanho do h3 em 1.2rem
+3. Seções de resumo e principal. Localize os elementos que representam a seção
+de resumo e principal da página, e aplique nelas:
+1. Alinhamento a direita ou centralizado para a seção de resumo.
+2. Espaçamento entre as linhas de 1.5 para os parágrafos da seção principal.
+4. Abreviaturas. Customize todos as abreviaturas para que a fonte seja carregada
+em small-caps */
+
+
+html{
+    background: #dde175;
+    color: #050DA6;
+
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+}
+
+P{
+    text-indent: 1em;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {font-size: 1.8rem;}
+h2 {font-size: 1.4rem;}
+h3 {font-size: 1.2rem;}
+
+.summary {
+    text-align: right;
+}
+.main p {line-height: 1.5;}
+
+abbr {font-variant: small-caps;}
+
+/*implementação das estilizações do exercício de box model*/
+
+.main footer{
+    margin: 4%;
+}
+
+.main footer a{
+    border: solid 2px rgb(37, 42, 80);
+    padding: 0.5em;
+    display: inline-block;
+}
+
+aside ul {
+    list-style-type:  none;
+}
+
+aside ul li{
+    margin: 1em;
+    text-align: center;
+}
+.page-wrapper{
+    width: 80%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+#zen-intro{
+    height: 550px;
+}
+
+#design-archives{
+    display: none;
+}
+
+#zen-intro header{
+    background-color: rgb(37, 42, 80);
+    color: aqua;
+}
+
+#zen-intro header h1, #zen-intro header h2{
+    display: inline-block;
+}
+
+#zen-intro header h1{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/*Implementação das estilizações dos exercícios de posicionamento*/
+
+.page-wrapper{
+    position: relative;
+}
+
+.explanation{
+    width: 60%;
+    margin-right: 35%;
+    border-right: #1f295c solid 1px;
+    padding-right: 2%;
+}
+
+.design-selection{
+    position: absolute;
+    top: 480px;
+    left: 62%;
+    width: 34%;
+    padding: 0 2%;
+}
+
+/*Implementação das estilizações referente aos exercicíos de flex box*/
+
+.supporting footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.benefits{
+    display: flex;
+    border-top: #1f295c solid 1px ;
+    border-bottom: #1f295c solid 1px;
+}
+
+.benefits p{
+    flex-basis: 70%;
+}
+
+.benefits h3{
+    order: 2;
+    align-self: center;
+    flex-basis: 30%;
+}
+
+.participation{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: #1f295c solid 1px;
+}
+
+.participation h3, .participation p{
+    flex-basis: 50%;
+}
+
+.participation h3{
+    align-self: center;
+}
+
+/*Implementação das estilizações referente aos exercicíos de pseudo classes*/
+
+a{
+    color: #BF6B04;
+}
+
+a:hover{
+    color: #be6a03a1;
+}
+
+.main p:first-of-type::first-letter{
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+}
+
+.design-selection li{
+    border-top: #1f295c solid 1px;
+    padding-top: 5px;
+}
+
+.design-selection li:last-of-type{
+    border-bottom: #1f295c solid 1px;
+    padding-bottom: 5px;
+}
+
+/*Implementação das estilizações referente aos exercicíos de media query*/
+
+@media screen and (max-width: 768px){
+    .design-selection{
+        position: static;
+        width: 100%;
+    }
+    
+    .explanation{
+        border-right: none;
+        width: 100%;
+    }
+
+    #zen-intro{
+        height: auto;
+    }
+
+    .participation{
+        flex-direction: column;
+    }
+
+    P{
+        text-indent: 0;
+    }
+}
+
+
+@media print {
+    html{
+        font-family: 'Times New Roman', Times, serif;
+    } 
+    
+    #zen-intro header{
+        background-color: #f3f3ea;
+        color: #1f295c;
+    }
+
+    .design-selection{
+        position: static;
+        width: 100%;
+    }
+    
+    .explanation{
+        border-right: none;
+        width: 100%;
+    }
+}
