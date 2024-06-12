@@ -1,0 +1,329 @@
+/*Principa{ color:#050DA6 }
+Secundária{ color:white }
+Destaque{ color:#6f1212 }
+Cor de fundo{ color: #303030}*/
+
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #050DA6;
+    font-size: 17px;
+    max-width:90%;
+    margin: auto;
+}
+    
+.menu{
+    height: 55px;
+    position: fixed;
+    display: inline-block;
+    background-color: #303030;
+    width: 89%;
+}
+
+.botões-seletores{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.botões-seletores a{
+    background-color: #c9c9c9;
+    border-radius: 20px;
+    border: solid #190000;
+    padding: 1%;
+
+}
+
+.botões-seletores a:hover{
+    color: #05f45d;
+}
+
+.cabeçalho{
+    padding-top: 4%;
+}
+
+.principal{
+    display: flex;
+    padding-bottom: 1%;
+    background-color: #969696;
+    border-radius: 20px;
+    display: block ;
+}
+
+.principal h1{
+    color: #6f1212;
+    padding-left: 3%;
+    padding-top: 1%;
+    font-size: 200%;
+}
+
+#titulo-alternativo{
+    display: none;
+}
+
+.informação{
+    color: rgb(26, 24, 24);
+    width: 95%;
+    border-radius: 10px;
+    padding-left: 3%;
+    padding-bottom: 1%;
+    display: flex;
+}
+
+#inf-pessoal{
+    flex-basis: 30%;
+}
+
+#imagem{
+    padding-top: 2%;
+    text-align: left;
+    flex-basis: 25%;
+}
+
+.informação img{
+    border-radius: 50%;
+}
+
+#apresentação{
+    flex-basis: 45%;
+}
+
+.geral{
+    display: flex;
+}
+
+.formação{
+    display: flex;
+    padding-left: 3%;
+    border-left: solid #190000 5px;
+}
+
+#formação{
+    padding-top: 8%;
+}
+
+#formação1{
+    flex-basis: 34%;
+}
+
+#formação2{
+    flex-basis: 23%;
+}
+
+#formação3{
+    flex-basis: 23%;
+}
+
+#formação4{
+    flex-basis: 20%;
+}
+
+.experiência{
+    display: flex;
+    padding-left: 3%;
+    border-left: solid #190000 5px;
+} 
+
+#experiencia{
+    padding-top: 8%;
+}
+
+#experiência1{
+    flex-basis: 50%;
+}
+
+#experiência2{
+    flex-basis: 50%;
+}
+
+.aside, h2, h3{
+    color: #6f1212;
+}
+
+#lista{
+    line-height: 35px;
+    margin-left: 2%;
+    margin-right: 2%;   
+    padding: 3%;
+}
+
+.rodapé{
+    padding: 2%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rodapé a{
+    background-color: #c9c9c9;
+    border-radius: 20px;
+    border: solid #190000;
+    padding: 1%;
+}
+
+.rodapé a:hover{
+    color: #05f45d;
+}
+
+
+
+@media screen and (max-width:900px){
+    .cabeçalho{
+        display: inline-flexbox;
+    }
+
+    .geral{
+        display:inline-flexbox ;
+    }
+
+    .principal{
+        padding-top: 3%;
+    } 
+
+    .principal img{
+        margin-left: 20%;
+        margin-bottom: 25%;
+    }
+
+    #imagem{
+        display: inline-block;
+        width: 50%;
+    }
+
+    #inf-pessoal{
+        display: inline-block; 
+    }
+
+    #informacao{
+        display: inline-flex;
+    }
+    
+    .informação{
+        display: block;
+        width: 98%;
+    }
+
+    #apresentação{
+        display: inline-block;
+        padding-right: 2%;
+        
+    }
+
+}
+
+@media screen and (max-width:500px){
+
+    .cabeçalho{
+        display: flexbox;
+    }
+
+    .menu{
+        background-color: #ffffff;
+    }
+
+    .botões-seletores{
+        display: flex;
+    }
+
+    .geral{
+        display: flexbox;
+    }
+
+    .principal{
+        display: inline-block;
+    }
+
+    #apresentação{
+        padding: auto;
+        width: 95%;
+    }
+
+    .formação-experiência{
+        display: inline-block;
+    }
+
+    .informação{
+        display: block;
+        width: 98%;
+    }
+
+    #formação{
+        padding-top: 16%;
+    }
+
+    .formação{
+        display: block;
+        border: outset #190000 5px ;
+        border-radius: 10px;
+    }
+    
+    #experiencia{
+        padding-top: 16%;
+    }
+
+    .experiência{
+        display: block;
+        margin-top: 10%;
+        padding: 3%;
+        border: outset #190000 5px ;
+        border-radius: 10px;
+    }  
+}
+
+@media print {
+    html{
+        font-family: 'Times New Roman', Times, serif;
+        color: rgb(15, 15, 15);
+        background-color: white;
+        max-width: 100%;
+    }
+
+    body{
+        display: inline-block;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .principal h1{
+        font-size: 120%;
+        color: #030303;
+    }
+
+    #imagem{
+        display: none;
+    }
+
+    .informação{
+        background-color: #ffffff;
+        color: rgb(15, 15, 15);
+    } 
+
+    #inf-pessoal{
+        display: inline-block;
+    }
+
+    #apresentação{
+        padding-left: 3%;
+        flex-basis: 70%;
+    }
+
+    .aside, h2, h3{
+        color: #141414;
+    }
+
+    .formação{
+        border-left: solid #141414 1px;
+        padding: 2%;
+        margin-left: 3%;
+    }
+
+    .experiência{
+        border-left: solid #141414 1px;
+        padding: 2%;
+    } 
+
+    .rodapé{
+        display: none;
+    }
+}
